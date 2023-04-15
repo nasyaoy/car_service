@@ -9,6 +9,13 @@ body {
   height: 100%;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
 img {
   max-width: 100%;
 }
@@ -35,10 +42,15 @@ h6 {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
 }
 
 .container {
@@ -48,10 +60,13 @@ h6 {
 }
 
 .header {
-  background-color: rgb(112, 202, 255);
   border-bottom: 3px solid white;
   padding-top: 16px;
   line-height: 1.13;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header__container {
@@ -59,6 +74,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   max-width: 1370px;
+  column-gap: 10px;
 }
 
 .logo {
@@ -92,40 +108,158 @@ h6 {
   color: rgba(255, 255, 255, 1);
 }
 
-.header__contact{
-    column-gap: 52px;
-    display: flex;
+.header__contact {
+  column-gap: 52px;
+  display: flex;
 }
 
-.location, .tel {
+.location,
+.tel {
   color: rgba(255, 255, 255, 1);
   font-style: normal;
   font-size: 16px;
   line-height: 1.13;
 }
 
+@media (max-width: 960px) {
+  .container {
+    max-width: 898px;
+  }
+
+  .logo {
+    max-width: 181px;
+  }
+
+  .header .location {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 722px;
+  }
+
+  .logo {
+    max-width: 142px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header__contact {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 300px;
+  }
+
+  .logo {
+    max-width: 81px;
+  }
+}
+
 .main {
-  background-color: rgb(186, 237, 149);
 }
+
 .hero {
+  height: 100vh;
+  background: url(../img/bg/кузовной_ремонт.png) no-repeat left top/cover;
+  padding-top: 272px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
 }
+
+.hero__container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .hero__main {
+  flex: 1;
 }
+
 .title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.17;
 }
-.sudtitle {
+
+.hero .title {
+  margin-bottom: 17px;
+}
+
+.hero__sudtitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 50px;
 }
 .hero__btns {
+  display: flex;
+  column-gap: 20px;
+  margin-bottom: 20px;
 }
+
 .btn {
+  background: none;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 170px;
+  display: inline-block;
+  padding: 12px 16px;
 }
-.hero__call-to-action {
+
+.btn.btn_theme_white {
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
+
+.hero__call-to-action span {
+  color: #ed7173;
+}
+
 .advantages {
+  display: flex;
+  justify-content: space-between;
 }
+
 .advantage {
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px 10px;
 }
+
+.hero__advantage {
+  border: 2px solid #ffffff;
+  flex: 0 1 276px;
+}
+
 .advantage__img {
+  margin-bottom: 14px;
 }
 .advantage__desc {
+}
+
+@media (max-width: 960px) {
+  .title {
+    font-size: 42px;
+  }
+
+  .hero__sudtitle {
+    font-size: 22px;
+    margin-bottom: 70px;
+  }
 }
