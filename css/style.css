@@ -121,54 +121,12 @@ p {
   line-height: 1.13;
 }
 
-@media (max-width: 960px) {
-  .container {
-    max-width: 898px;
-  }
-
-  .logo {
-    max-width: 181px;
-  }
-
-  .header .location {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 722px;
-  }
-
-  .logo {
-    max-width: 142px;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .header__contact {
-    display: none;
-  }
-}
-
-@media (max-width: 320px) {
-  .container {
-    max-width: 300px;
-  }
-
-  .logo {
-    max-width: 81px;
-  }
-}
-
 .main {
 }
 
 .hero {
   height: 100vh;
-  background: url(../img/bg/кузовной_ремонт.png) no-repeat left top/cover;
+  background: url(../img/bg/кузовной_ремонт.png) no-repeat center / cover;
   padding-top: 272px;
   color: #ffffff;
   display: flex;
@@ -185,6 +143,7 @@ p {
 
 .hero__main {
   flex: 1;
+  padding-left: 95px;
 }
 
 .title {
@@ -234,6 +193,8 @@ p {
 .advantages {
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
+  column-gap: 24px;
 }
 
 .advantage {
@@ -248,12 +209,34 @@ p {
 }
 
 .advantage__img {
+  width: 30px;
+  height: 30px;
   margin-bottom: 14px;
 }
 .advantage__desc {
 }
 
 @media (max-width: 960px) {
+  .container {
+    max-width: 898px;
+  }
+
+  .logo {
+    max-width: 181px;
+  }
+
+  .header .location {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 210px;
+  }
+
+  .hero__main {
+    padding-left: 73px;
+  }
+
   .title {
     font-size: 42px;
   }
@@ -262,4 +245,94 @@ p {
     font-size: 22px;
     margin-bottom: 70px;
   }
+}
+
+@media (max-width: 768px) {
+  .header {
+    z-index: 10px;
+  }
+
+  .container {
+    max-width: 722px;
+  }
+
+  .logo {
+    max-width: 142px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header__contact {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 170px;
+    position: relative;
+  }
+
+  .hero::before {
+    content: "";
+    display: block;
+    position: absolute;
+    /*background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 19.11%
+    );*/
+    top: 0;
+    left: 0;
+  }
+
+  .advantage {
+    font-size: 14px;
+  }
+
+  .advantage__img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 11px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 300px;
+  }
+
+  .logo {
+    max-width: 81px;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero__main {
+    padding-left: 0px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+  .hero .title {
+    margin-bottom: 5px;
+  }
+
+  .hero__sudtitle{
+    font-size: 14px;
+    margin-bottom: 33px;
+  }
+
+.hero__btns{
+  flex-wrap: wrap;
+  row-gap: 14px;
+}
+
+.btn{
+  padding: 8px 12px;
+  font-size: 12px;
+}
 }
