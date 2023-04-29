@@ -67,6 +67,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .header__container {
@@ -139,6 +140,7 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%;
+  z-index: 10px;
 }
 
 .hero__main {
@@ -213,8 +215,6 @@ p {
   height: 30px;
   margin-bottom: 14px;
 }
-.advantage__desc {
-}
 
 @media (max-width: 960px) {
   .container {
@@ -249,7 +249,6 @@ p {
 
 @media (max-width: 768px) {
   .header {
-    z-index: 10px;
   }
 
   .container {
@@ -268,6 +267,41 @@ p {
     display: none;
   }
 
+  .burger {
+    width: 47px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .burger__el,
+  .burger__el::before,
+  .burger__el::after {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 11px;
+  }
+
+  .burger__el::before,
+  .burger__el::after {
+    content: "";
+    position: absolute;
+  }
+
+  .burger__el::before {
+    top: 0;
+    left: 0;
+  }
+
+  .burger__el::after {
+    bottom: 0;
+    right: 0;
+    width: 83%;
+  }
+
   .hero {
     padding-top: 170px;
     position: relative;
@@ -275,15 +309,17 @@ p {
 
   .hero::before {
     content: "";
-    display: block;
     position: absolute;
-    /*background: linear-gradient(
+    display: block;
+    background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 19.11%
-    );*/
+    );
     top: 0;
     left: 0;
+    height: 100%;
+    width: 100%;
   }
 
   .advantage {
@@ -306,6 +342,120 @@ p {
     max-width: 81px;
   }
 
+  .burger {
+    width: 29px;
+    height: 19px;
+  }
+
+  .burger__el,
+  .burger__el::before,
+  .burger__el::after {
+    height: 3px;
+  }
+
+  .burger__el::after {
+    width: 78%;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero__main {
+    padding-left: 83px;
+
+  }
+
+  .title {
+    font-size: 25px;
+  }
+  .hero .title {
+    margin-bottom: 5px;
+  }
+
+  .hero__sudtitle {
+    font-size: 14px;
+    margin-bottom: 33px;
+  }
+
+  .hero__btns {
+    flex-wrap: wrap;
+    row-gap: 14px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .advantages {
+    flex-direction: column;
+    padding: 0 20px;
+    column-gap: 24px;
+    row-gap: 10px;
+    padding: 0;
+  }
+
+  .advantage {
+    text-align: left;
+    border-radius: 4px;
+    background-color: #ffffff;
+    flex: 0 1 56px;
+  }
+
+  .hero__advantage {
+    display: flex;
+    border: 2px solid #ffffff;
+    align-items: center;
+    column-gap: 28px;
+    width: 100%;
+
+  }
+
+  .advantage__img {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .advantage__img path{
+    fill: black;
+  }
+
+  .advantage__desc {
+    color: black;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .header__container{
+    max-width: 95%;
+  }
+
+  .logo {
+    max-width: 81px;
+  }
+
+  .burger {
+    width: 29px;
+    height: 19px;
+  }
+
+  .burger__el,
+  .burger__el::before,
+  .burger__el::after {
+    height: 3px;
+  }
+
+  .burger__el::after {
+    width: 78%;
+  }
+
   .hero {
     padding-top: 120px;
   }
@@ -321,18 +471,56 @@ p {
     margin-bottom: 5px;
   }
 
-  .hero__sudtitle{
+  .hero__sudtitle {
     font-size: 14px;
     margin-bottom: 33px;
   }
 
-.hero__btns{
-  flex-wrap: wrap;
-  row-gap: 14px;
-}
+  .hero__btns {
+    flex-wrap: wrap;
+    row-gap: 14px;
+  }
 
-.btn{
-  padding: 8px 12px;
-  font-size: 12px;
-}
+  .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .advantages {
+    flex-direction: column;
+    padding: 0 20px;
+    column-gap: 24px;
+    row-gap: 10px;
+    padding: 0;
+  }
+
+  .advantage {
+    text-align: left;
+    border-radius: 4px;
+    background-color: #ffffff;
+    flex: 0 1 56px;
+  }
+
+  .hero__advantage {
+    display: flex;
+    border: 2px solid #ffffff;
+    align-items: center;
+    column-gap: 28px;
+    width: 100%;
+
+  }
+
+  .advantage__img {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .advantage__img path{
+    fill: black;
+  }
+
+  .advantage__desc {
+    color: black;
+  }
 }
