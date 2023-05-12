@@ -359,6 +359,66 @@ p {
   
 }
 
+.reviews {
+height: 450px;
+  background: url(../img/bg/reviews_bg.png) no-repeat center/cover;
+}
+.container {
+}
+.reviews__container {
+}
+.section__title {
+
+}
+.section__title_color_white {
+}
+.section__subtitle {
+}
+.section__subtitle_color_white {
+  color: #ffffff;
+}
+
+.review__img {
+  display: flex;
+  position: relative;
+}
+
+.review__img::before{
+  content: url(../img/icons/arrow.png);
+  position: absolute;
+  top: 0;
+  left: 0; 
+  column-gap: 20px;
+}
+
+.review__img-wrap {
+  margin-bottom: 90px;
+}
+
+.example {
+}
+.container {
+}
+.example__container {
+}
+.section__title {
+
+}
+.section__title_color_grey {
+}
+.section__subtitle {
+}
+.example__list {
+  display: flex;
+  column-gap: 20px;
+}
+.example__item {
+}
+.example__img {
+}
+.btn {
+}
+
 @media (max-width: 960px) {
   .container {
     max-width: 898px;
